@@ -49,27 +49,27 @@ export const QuoteForm = (getQuotes: () => Promise<void>) => {
     }, [])
     
     return (
-        <div>
-            <form onSubmit={onSubmit} className="flex flex-col w-1/3">
+        <div className="">
+            <form onSubmit={onSubmit} className="flex flex-col w-1/3 mt-2">
             <input 
                 onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
                 id="gallonsrequested"
                 name="gallonsrequested"
                 type="number"
-                placeholder="gallonsrequested"/>
-            <div>{values?.deliveryaddress}</div>
+                placeholder="Gallons Requested"/>
+            <div className="mt-4">Delivery Address: {values?.deliveryaddress}</div>
             <input
                 onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
                 id="deliverydate"
                 name="deliverydate"
                 type="date"
-                placeholder="deliverydate"/>
+                placeholder="Delivery Date"/>
             
             <div>{values?.suggestedpricepergallon}</div>
             <div>{values?.totalamountdue}</div>
-            <button type="submit">Submit</button>
+            <button className="p-3 mt-4 w-24 mx-auto rounded bg-blue-500 hover:bg-green-700 font-bold text-lg" type="submit">Submit</button>
             </form>
         </div>
     )

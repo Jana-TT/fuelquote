@@ -28,14 +28,14 @@ export const UserDisplay = () => {
 
     return(
         <div className="flex flex-col">
-            <div>{user._id}</div>
-            <div>{user.username}</div>
-            <div>{user.password}</div>
-            <div>{user.address1}</div>
-            {user.address2 ? <div>{user.address2}</div> : <></>}
-            <div>{user.city}</div>
-            <div>{user.state}</div>
-            <div>{user.zipcode}</div>
+                <div>ID: {user._id}</div>
+                <div>Username: {user.username}</div>
+                <div>Password: {user.password}</div>
+                <div>Address: {user.address1}</div>
+                {user.address2 ? <div>Continued Address: {user.address2}</div> : <></>}
+                <div>City: {user.city}</div>
+                <div>State: {user.state}</div>
+                <div>Zipcode: {user.zipcode}</div>
         </div>
     )
 }

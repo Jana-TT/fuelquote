@@ -5,6 +5,7 @@ import { FormEvent, useState } from "react";
 import { SetUser } from "../hooks/globaluser";
 import { Register } from "../hooks/registration";
 import { IUser } from "../Models/User";
+import Header from "./header";
 
 
 export const Registration = () => {
@@ -44,8 +45,8 @@ export const Registration = () => {
     };
     
     return (
-        <div className="p-4 rounded relative">
-            <form onSubmit={onSubmit} className="flex flex-col w-1/3">
+        <div className="h-screen bg-gradient-to-r from-green-700 via-blue-800 to-green-300">
+            <form onSubmit={onSubmit} className="flex flex-col w-1/3 md:w-8/12 text-xl pt-60 pr-80 pl-80 h-screen bg-gray-800">
             <input 
                 onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
@@ -66,21 +67,21 @@ export const Registration = () => {
                 id="fullname"
                 name="fullname"
                 type="text"
-                placeholder="Full Name"/>
+                placeholder="First and Last Name"/>
             <input
             onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
                 id="address1"
                 name="address1"
                 type="text"
-                placeholder="First Address"/>
+                placeholder="Address"/>
             <input 
             onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
                 id="address2"
                 name="address2"
                 type="text"
-                placeholder="Second Address"/>
+                placeholder="Continue Address (if needed)"/>
             <input 
             onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
@@ -102,7 +103,15 @@ export const Registration = () => {
                 name="zipcode"
                 type="text"
                 placeholder="Zipcode"/>
-            <button className= "p-3 mt-4 w-24 mx-auto rounded bg-green-500 hover:bg-green-700 font-bold text-lg" type="submit">Submit</button>
+            <div className="mx-auto flex">
+                <button className= "p-3 mt-4 w-24 mx-auto rounded bg-blue-500 hover:bg-green-700 font-bold text-lg" type="submit">
+                    Submit
+                </button>
+                <div className="mt-2 pl-64 ml-10">
+                    <Header/>
+                </div>
+            </div>
+            
             </form>
         </div>
     )

@@ -58,7 +58,7 @@ export const Login = () => {
                 name="password"
                 type="text"
                 placeholder="Password"/>
-            <button className= "p-3 mt-4 w-24 mx-auto rounded bg-green-500 hover:bg-green-700 font-bold text-lg" type="submit">Login</button>
+            <button className= "p-3 mt-4 w-24 mx-auto rounded bg-blue-500 hover:bg-green-700 font-bold text-lg" type="submit">Login</button>
             </form>
         </div>
     )
